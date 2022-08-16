@@ -1,0 +1,286 @@
+<!-------made by Vartika Agrahari (CS18M016)------------>
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>Catalogue of Game-Specific Anti-Patterns</title>
+	<meta charset="utf-8">
+	<meta name ="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  	<style>
+    .navbar {
+    	margin-bottom: 0;
+    	border-radius: 0;
+    	background-color: #5E4485;
+    	color: #FFF;
+    	padding:3% 0;
+    	font-size: 1.2em;
+    	border: 0;
+      text-align: left;
+    }
+    .navbar-brand {
+    	float: left;
+      font-size: 3em;
+    	min-height: 55px;
+    	padding: 15px 15px 15px;
+      color: #FFF;
+      text-align: left;
+    } 
+    .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus,
+    .navbar-inverse .navbar-nav .active a:hover {
+      color: #FFF;
+      background-color: #5E4485;
+      text-align: left;
+    }
+    .navbar-inverse .navbar-nav li a {
+      color: #FFF;
+      text-align: left;
+    }
+    footer {
+      width: 100%;
+      background-color: #5E4485;
+      padding: 1% 0;
+      color: #FFF;
+      text-align: left;
+    } 
+    .txt {
+      color: #FFF;
+      font-size: 2em;
+    }
+    h1 {
+      font-size: 2em;
+      background-color: #FFF;
+      color: #000;
+      text-align: left;      
+    }
+    #grad1 {
+  background-color: teal; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, teal , #0f4d92); /* Standard syntax (must be last) */
+} 
+    h2 {
+      font-size: 2em;
+      background-color: #FFF;
+      color: #576756;
+      text-align: left;
+    }
+    h3 {
+      font-size: 1.50em;
+      background-color: #FFF;
+      color: #576756;
+      text-align: left;
+    }
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      color: #FFF;
+      text-align: left;
+    }
+    .fa:hover {
+      color: #FFF;
+      text-decoration: none;
+      text-align: left;
+      }
+    @media (max-width: 900px) {
+     .fa:hover {
+      color: #FFF;
+      text-decoration: none;
+      text-align: left;
+      }
+    }
+    @media (max-width: 600px) {
+      .carousel-caption{
+      display:none;
+      text-align: left;
+    }
+  }
+  .container {
+    font-size: 1.2em;
+    text-align: left;
+  }
+	</style>
+</head>
+<body>
+	<nav id="grad1" class="navbar navbar-inverse">
+		<div id="grad1" class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<p class="txt">A Catalogue of Game-Specific Anti-Patterns</p>
+			</div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li ><a id="grad1" href="index.html">Home</a></li>
+          <li ><a id="grad1" href="docs.html">Documents</a></li>
+        </ul>
+      </div>
+		</div>
+	</nav>
+  <div class="container text-center">
+<h1>Take Measures to Eliminate Lag and Synchronization Issues Between Client and Server</h1>
+<h4>(125 occurrences)</h4>
+<!-- <p>We include issues related too security in this category.</p> -->
+<h2>Context</h2>
+<p>Networked games are supported by distributed client-server architecture [1]. Due to this,
+    a constant communication is required between the nodes in the network during the gameplay</p>
+<h2>Problem</h2>
+<p>Weak network, disconnections and server latency can induce lag and cause a bad gaming
+    experience. Lack of proper synchronization can lead to variation in game states on client 
+    and the server.</p>
+<h2>Solution</h2>
+<p>Lag can be handled using methods such as client-side predictive logic and latency minimization
+    techniques. Synchronization can be achieved through use of reliable data transmission 
+    protocols.</p>
+<h2>Example</h2>
+<p>Consider the example from the post 
+    <a href="https://gamedev.stackexchange.com/questions/114633/">114633</a>
+    where the user faces the issue of the character moving slower due to server lag. 
+    Due to this problem, the character gets caught by the enemies and is killed.
+    This issue can be resolved by modifying the logic to move the character based on
+    time duration rather than the number of key-presses.</p>
+<h3>References</h3>
+<p>[1] W. tong Cai, P. Xavier, S. J. Turner, B.-S. Lee, A scalable ar-
+    chitecture for supporting interactive games on the internet, in:
+    Proceedings 16th Workshop on Parallel and Distributed Simulation, IEEE Computer Society, 2002, pp. 60–60.</p>
+<h2>Occurrences</h2>
+
+  <div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading">Questions</div>
+      <div class="panel-body">125 occurrences</div>
+<ul>
+    <li><a href='https://stackoverflow.com/questions/143153/'>https://stackoverflow.com/questions/143153/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/67663/'>https://stackoverflow.com/questions/67663/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/187907/'>https://stackoverflow.com/questions/187907/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/48881/'>https://stackoverflow.com/questions/48881/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/102483/'>https://stackoverflow.com/questions/102483/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/69460/'>https://stackoverflow.com/questions/69460/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/151493/'>https://stackoverflow.com/questions/151493/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/183418/'>https://stackoverflow.com/questions/183418/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/72706/'>https://stackoverflow.com/questions/72706/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/93477/'>https://stackoverflow.com/questions/93477/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/136166/'>https://stackoverflow.com/questions/136166/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/54212/'>https://stackoverflow.com/questions/54212/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/109302/'>https://stackoverflow.com/questions/109302/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/114633/'>https://stackoverflow.com/questions/114633/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/200864/'>https://stackoverflow.com/questions/200864/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/116635/'>https://stackoverflow.com/questions/116635/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/194031/'>https://stackoverflow.com/questions/194031/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/163906/'>https://stackoverflow.com/questions/163906/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/102464/'>https://stackoverflow.com/questions/102464/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/183291/'>https://stackoverflow.com/questions/183291/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/176626/'>https://stackoverflow.com/questions/176626/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/45611/'>https://stackoverflow.com/questions/45611/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/165836/'>https://stackoverflow.com/questions/165836/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/38539/'>https://stackoverflow.com/questions/38539/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/91875/'>https://stackoverflow.com/questions/91875/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/44551/'>https://stackoverflow.com/questions/44551/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/72720/'>https://stackoverflow.com/questions/72720/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/32119/'>https://stackoverflow.com/questions/32119/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/65973/'>https://stackoverflow.com/questions/65973/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/163862/'>https://stackoverflow.com/questions/163862/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/19338/'>https://stackoverflow.com/questions/19338/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/141807/'>https://stackoverflow.com/questions/141807/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/164041/'>https://stackoverflow.com/questions/164041/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/184119/'>https://stackoverflow.com/questions/184119/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/101181/'>https://stackoverflow.com/questions/101181/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/156953/'>https://stackoverflow.com/questions/156953/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/13844/'>https://stackoverflow.com/questions/13844/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/809/'>https://stackoverflow.com/questions/809/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/117587/'>https://stackoverflow.com/questions/117587/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/60565/'>https://stackoverflow.com/questions/60565/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/84006/'>https://stackoverflow.com/questions/84006/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/144933/'>https://stackoverflow.com/questions/144933/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/134557/'>https://stackoverflow.com/questions/134557/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/89757/'>https://stackoverflow.com/questions/89757/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/175986/'>https://stackoverflow.com/questions/175986/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/29176/'>https://stackoverflow.com/questions/29176/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/11606/'>https://stackoverflow.com/questions/11606/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/59810/'>https://stackoverflow.com/questions/59810/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/187660/'>https://stackoverflow.com/questions/187660/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/29035/'>https://stackoverflow.com/questions/29035/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/103601/'>https://stackoverflow.com/questions/103601/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/29434/'>https://stackoverflow.com/questions/29434/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/75393/'>https://stackoverflow.com/questions/75393/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/151068/'>https://stackoverflow.com/questions/151068/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/105190/'>https://stackoverflow.com/questions/105190/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/42175/'>https://stackoverflow.com/questions/42175/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/168285/'>https://stackoverflow.com/questions/168285/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/102721/'>https://stackoverflow.com/questions/102721/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/170168/'>https://stackoverflow.com/questions/170168/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/4616/'>https://stackoverflow.com/questions/4616/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/154781/'>https://stackoverflow.com/questions/154781/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/129432/'>https://stackoverflow.com/questions/129432/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/40517/'>https://stackoverflow.com/questions/40517/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/188441/'>https://stackoverflow.com/questions/188441/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/46791/'>https://stackoverflow.com/questions/46791/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/104634/'>https://stackoverflow.com/questions/104634/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/83380/'>https://stackoverflow.com/questions/83380/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/147559/'>https://stackoverflow.com/questions/147559/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/115036/'>https://stackoverflow.com/questions/115036/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/2166/'>https://stackoverflow.com/questions/2166/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/87105/'>https://stackoverflow.com/questions/87105/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/142427/'>https://stackoverflow.com/questions/142427/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/164367/'>https://stackoverflow.com/questions/164367/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/108898/'>https://stackoverflow.com/questions/108898/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/25186/'>https://stackoverflow.com/questions/25186/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/126481/'>https://stackoverflow.com/questions/126481/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/129264/'>https://stackoverflow.com/questions/129264/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/176741/'>https://stackoverflow.com/questions/176741/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/74862/'>https://stackoverflow.com/questions/74862/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/18665/'>https://stackoverflow.com/questions/18665/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/49506/'>https://stackoverflow.com/questions/49506/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/64019/'>https://stackoverflow.com/questions/64019/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/10024/'>https://stackoverflow.com/questions/10024/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/173142/'>https://stackoverflow.com/questions/173142/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/56584/'>https://stackoverflow.com/questions/56584/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/124364/'>https://stackoverflow.com/questions/124364/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/21173/'>https://stackoverflow.com/questions/21173/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/96254/'>https://stackoverflow.com/questions/96254/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/162872/'>https://stackoverflow.com/questions/162872/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/46902/'>https://stackoverflow.com/questions/46902/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/110838/'>https://stackoverflow.com/questions/110838/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/96987/'>https://stackoverflow.com/questions/96987/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/138891/'>https://stackoverflow.com/questions/138891/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/130627/'>https://stackoverflow.com/questions/130627/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/60031/'>https://stackoverflow.com/questions/60031/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/60162/'>https://stackoverflow.com/questions/60162/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/185700/'>https://stackoverflow.com/questions/185700/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/154829/'>https://stackoverflow.com/questions/154829/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/59866/'>https://stackoverflow.com/questions/59866/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/54068/'>https://stackoverflow.com/questions/54068/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/186762/'>https://stackoverflow.com/questions/186762/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/120612/'>https://stackoverflow.com/questions/120612/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/65873/'>https://stackoverflow.com/questions/65873/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/151629/'>https://stackoverflow.com/questions/151629/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/97857/'>https://stackoverflow.com/questions/97857/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/136770/'>https://stackoverflow.com/questions/136770/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/177462/'>https://stackoverflow.com/questions/177462/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/53698/'>https://stackoverflow.com/questions/53698/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/68979/'>https://stackoverflow.com/questions/68979/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/29642/'>https://stackoverflow.com/questions/29642/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/188203/'>https://stackoverflow.com/questions/188203/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/58628/'>https://stackoverflow.com/questions/58628/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/169080/'>https://stackoverflow.com/questions/169080/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/32501/'>https://stackoverflow.com/questions/32501/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/55203/'>https://stackoverflow.com/questions/55203/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/75029/'>https://stackoverflow.com/questions/75029/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/186211/'>https://stackoverflow.com/questions/186211/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/120033/'>https://stackoverflow.com/questions/120033/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/84402/'>https://stackoverflow.com/questions/84402/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/33882/'>https://stackoverflow.com/questions/33882/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/14806/'>https://stackoverflow.com/questions/14806/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/77549/'>https://stackoverflow.com/questions/77549/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/44711/'>https://stackoverflow.com/questions/44711/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/65995/'>https://stackoverflow.com/questions/65995/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/70785/'>https://stackoverflow.com/questions/70785/</a><br></li>
+</ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
