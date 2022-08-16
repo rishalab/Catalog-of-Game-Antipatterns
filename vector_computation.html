@@ -1,0 +1,208 @@
+<!-------made by Vartika Agrahari (CS18M016)------------>
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>Catalogue of Game-Specific Anti-Patterns</title>
+	<meta charset="utf-8">
+	<meta name ="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  	<style>
+    .navbar {
+    	margin-bottom: 0;
+    	border-radius: 0;
+    	background-color: #5E4485;
+    	color: #FFF;
+    	padding:3% 0;
+    	font-size: 1.2em;
+    	border: 0;
+      text-align: left;
+    }
+    .navbar-brand {
+    	float: left;
+      font-size: 3em;
+    	min-height: 55px;
+    	padding: 15px 15px 15px;
+      color: #FFF;
+      text-align: left;
+    } 
+    .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus,
+    .navbar-inverse .navbar-nav .active a:hover {
+      color: #FFF;
+      background-color: #5E4485;
+      text-align: left;
+    }
+    .navbar-inverse .navbar-nav li a {
+      color: #FFF;
+      text-align: left;
+    }
+    footer {
+      width: 100%;
+      background-color: #5E4485;
+      padding: 1% 0;
+      color: #FFF;
+      text-align: left;
+    } 
+    .txt {
+      color: #FFF;
+      font-size: 2em;
+    }
+    h1 {
+      font-size: 2em;
+      background-color: #FFF;
+      color: #000;
+      text-align: left;      
+    }
+    #grad1 {
+  background-color: teal; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, teal , #0f4d92); /* Standard syntax (must be last) */
+} 
+    h2 {
+      font-size: 2em;
+      background-color: #FFF;
+      color: #576756;
+      text-align: left;
+    }
+    h3 {
+      font-size: 1.50em;
+      background-color: #FFF;
+      color: #576756;
+      text-align: left;
+    }
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      color: #FFF;
+      text-align: left;
+    }
+    .fa:hover {
+      color: #FFF;
+      text-decoration: none;
+      text-align: left;
+      }
+    @media (max-width: 900px) {
+     .fa:hover {
+      color: #FFF;
+      text-decoration: none;
+      text-align: left;
+      }
+    }
+    @media (max-width: 600px) {
+      .carousel-caption{
+      display:none;
+      text-align: left;
+    }
+  }
+  .container {
+    font-size: 1.2em;
+    text-align: left;
+  }
+	</style>
+</head>
+<body>
+	<nav id="grad1" class="navbar navbar-inverse">
+		<div id="grad1" class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<p class="txt">A Catalogue of Game-Specific Anti-Patterns</p>
+			</div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li ><a id="grad1" href="index.html">Home</a></li>
+          <li ><a id="grad1" href="docs.html">Documents</a></li>
+        </ul>
+      </div>
+		</div>
+	</nav>
+  <div class="container text-center">
+<h1>Ensure Correct Computation of Vectors</h1>
+<h4>(52 occurrences)</h4>
+<!-- <p>We include issues related too security in this category.</p> -->
+<h2>Context</h2>
+<p>Many games involve movements of objects. Vectors are fundamental in representing the
+    aspects of objects such as position, direction, velocity, acceleration, momentum and 
+    so on.</p>
+<h2>Problem</h2>
+<p>Incorrect computation while updating the vectors associated with the objects can cause
+    incorrect movements and produce unstable results.</p>
+<h2>Solution</h2>
+<p>This can be avoided by ensuring the use of correct formulas from mathematics and physics
+    domain to update the vectors associated with the object.</p>
+<h2>Example</h2>
+<p>Consider the example from the post 
+    <a href="https://gamedev.stackexchange.com/questions/143430/">143430</a>
+    where the programmer wants to compute the relative quaternion rotation of an object. 
+    Use of incorrect formula produces unexpected results for some specific rotations. 
+    This can be overcome by using the correct vector update formula.</p>
+
+<h2>Occurrences</h2>
+
+  <div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading">Questions</div>
+      <div class="panel-body">52 occurrences</div>
+<ul>
+    <li><a href='https://stackoverflow.com/questions/21463/'>https://stackoverflow.com/questions/21463/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/34519/'>https://stackoverflow.com/questions/34519/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/166662/'>https://stackoverflow.com/questions/166662/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/53959/'>https://stackoverflow.com/questions/53959/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/49855/'>https://stackoverflow.com/questions/49855/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/143430/'>https://stackoverflow.com/questions/143430/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/131619/'>https://stackoverflow.com/questions/131619/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/32834/'>https://stackoverflow.com/questions/32834/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/13461/'>https://stackoverflow.com/questions/13461/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/31288/'>https://stackoverflow.com/questions/31288/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/13436/'>https://stackoverflow.com/questions/13436/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/73046/'>https://stackoverflow.com/questions/73046/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/201569/'>https://stackoverflow.com/questions/201569/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/124755/'>https://stackoverflow.com/questions/124755/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/55449/'>https://stackoverflow.com/questions/55449/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/200292/'>https://stackoverflow.com/questions/200292/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/45441/'>https://stackoverflow.com/questions/45441/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/3430/'>https://stackoverflow.com/questions/3430/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/79172/'>https://stackoverflow.com/questions/79172/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/83144/'>https://stackoverflow.com/questions/83144/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/34536/'>https://stackoverflow.com/questions/34536/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/7131/'>https://stackoverflow.com/questions/7131/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/116035/'>https://stackoverflow.com/questions/116035/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/48048/'>https://stackoverflow.com/questions/48048/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/105230/'>https://stackoverflow.com/questions/105230/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/109991/'>https://stackoverflow.com/questions/109991/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/147714/'>https://stackoverflow.com/questions/147714/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/33709/'>https://stackoverflow.com/questions/33709/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/160161/'>https://stackoverflow.com/questions/160161/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/9738/'>https://stackoverflow.com/questions/9738/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/43839/'>https://stackoverflow.com/questions/43839/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/24267/'>https://stackoverflow.com/questions/24267/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/163828/'>https://stackoverflow.com/questions/163828/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/58275/'>https://stackoverflow.com/questions/58275/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/183908/'>https://stackoverflow.com/questions/183908/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/115539/'>https://stackoverflow.com/questions/115539/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/50480/'>https://stackoverflow.com/questions/50480/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/82790/'>https://stackoverflow.com/questions/82790/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/36078/'>https://stackoverflow.com/questions/36078/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/143274/'>https://stackoverflow.com/questions/143274/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/146241/'>https://stackoverflow.com/questions/146241/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/40243/'>https://stackoverflow.com/questions/40243/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/65679/'>https://stackoverflow.com/questions/65679/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/72950/'>https://stackoverflow.com/questions/72950/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/17313/'>https://stackoverflow.com/questions/17313/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/77555/'>https://stackoverflow.com/questions/77555/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/68188/'>https://stackoverflow.com/questions/68188/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/30926/'>https://stackoverflow.com/questions/30926/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/151218/'>https://stackoverflow.com/questions/151218/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/119725/'>https://stackoverflow.com/questions/119725/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/72565/'>https://stackoverflow.com/questions/72565/</a><br></li>
+    <li><a href='https://stackoverflow.com/questions/165349/'>https://stackoverflow.com/questions/165349/</a><br></li>    
+</ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
