@@ -1,0 +1,204 @@
+<!-------made by Vartika Agrahari (CS18M016)------------>
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>Catalogue of Game-Specific Anti-Patterns</title>
+	<meta charset="utf-8">
+	<meta name ="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  	<style>
+    .navbar {
+    	margin-bottom: 0;
+    	border-radius: 0;
+    	background-color: #5E4485;
+    	color: #FFF;
+    	padding:3% 0;
+    	font-size: 1.2em;
+    	border: 0;
+      text-align: left;
+    }
+    .navbar-brand {
+    	float: left;
+      font-size: 3em;
+    	min-height: 55px;
+    	padding: 15px 15px 15px;
+      color: #FFF;
+      text-align: left;
+    } 
+    .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus,
+    .navbar-inverse .navbar-nav .active a:hover {
+      color: #FFF;
+      background-color: #5E4485;
+      text-align: left;
+    }
+    .navbar-inverse .navbar-nav li a {
+      color: #FFF;
+      text-align: left;
+    }
+    footer {
+      width: 100%;
+      background-color: #5E4485;
+      padding: 1% 0;
+      color: #FFF;
+      text-align: left;
+    } 
+    .txt {
+      color: #FFF;
+      font-size: 2em;
+    }
+  #grad1 {
+  background-color: teal; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, teal , #0f4d92); /* Standard syntax (must be last) */
+} 
+    h1 {
+      font-size: 2em;
+      background-color: #FFF;
+      color: #000;
+      text-align: left;      
+    }
+    h2 {
+      font-size: 2em;
+      background-color: #FFF;
+      color: #576756;
+      text-align: left;
+    }
+    h3 {
+      font-size: 1.50em;
+      background-color: #FFF;
+      color: #576756;
+      text-align: left;
+    }
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      color: #FFF;
+      text-align: left;
+    }
+    .fa:hover {
+      color: #FFF;
+      text-decoration: none;
+      text-align: left;
+      }
+    @media (max-width: 900px) {
+     .fa:hover {
+      color: #FFF;
+      text-decoration: none;
+      text-align: left;
+      }
+    }
+    @media (max-width: 600px) {
+      .carousel-caption{
+      display:none;
+      text-align: left;
+    }
+  }
+  .container {
+    font-size: 1.2em;
+    text-align: left;
+  }
+	</style>
+</head>
+<body>
+	<nav id="grad1" class="navbar navbar-inverse">
+		<div id="grad1" class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<p class="txt">A Catalogue of Game-Specific Anti-Patterns</p>
+			</div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li ><a id="grad1" href="index.html">Home</a></li>
+          <li ><a id="grad1" href="docs.html">Documents</a></li>
+        </ul>
+      </div>
+		</div>
+	</nav>
+  <div class="container text-center">
+<h1>Beware of common pitfalls while using APIs</h1>
+<h4>(51 occurrences)</h4>
+<!-- <p>Memory related issues which affects the performance of games are categorized in this theme.</p> -->
+<h2>Context</h2>
+<p>The use of game engines/frameworks and
+    external libraries is common in game development
+    [1]. The APIs provided by frameworks/engines and
+    external libraries are used for quick and convenient
+    implementation of the functionalities based on the
+    requirements of the game</p>
+<h2>Problem</h2>
+<p> APIs may be useful in implementing the
+    required functionalities. However, their incorrect or
+    improper usage due to a lack of proper understanding
+    of their usage and working may cause the game to
+    malfunction and lead to inefficiencies. This may
+    impact the game’s functionality and the performance.</p>
+<h2>Solution</h2>
+<p>This can be avoided by being aware of
+    common pitfalls of while using the APIs and take
+    appropriate steps to deal with them.</p>
+<h2>Example</h2>
+<p>Consider the use of SpriteBatch in
+    Monogame framework to render multiple tiles on
+    screen.Saving each tile in a different texture slows
+    down the rendering on large screens due to Spite-
+    Batch’s internal handling of texture switches. Being
+    aware of this pitfall and using texture atlas to deal
+    with the issue can resolve the issue of slow rendering.
+    The example is based on the post with ID 
+    <a href="https://gamedev.stackexchange.com/questions/82799/">82799</a>
+</p>
+<h3>Reference</h3>
+<p>[1] M. Lewis, J. Jacobson, Game engines, Communications of the
+    ACM 45 (1) (2002) 27.</p>
+<h2>Occurrences</h2>
+
+  
+    <div class="panel-group">
+      <div class="panel panel-info">
+        <div class="panel-heading">Questions</div>
+        <div class="panel-body">51 occurrences</div>
+  <ul>
+    <li><a href='https://stackoverflow.com/questions/178351/'>https://stackoverflow.com/questions/178351/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/135687/'>https://stackoverflow.com/questions/135687/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/90006/'>https://stackoverflow.com/questions/90006/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/194293/'>https://stackoverflow.com/questions/194293/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/44839/'>https://stackoverflow.com/questions/44839/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/167200/'>https://stackoverflow.com/questions/167200/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/21223/'>https://stackoverflow.com/questions/21223/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/54328/'>https://stackoverflow.com/questions/54328/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/150031/'>https://stackoverflow.com/questions/150031/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/189398/'>https://stackoverflow.com/questions/189398/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/84246/'>https://stackoverflow.com/questions/84246/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/31415/'>https://stackoverflow.com/questions/31415/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/174315/'>https://stackoverflow.com/questions/174315/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/38838/'>https://stackoverflow.com/questions/38838/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/40382/'>https://stackoverflow.com/questions/40382/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/125727/'>https://stackoverflow.com/questions/125727/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/101242/'>https://stackoverflow.com/questions/101242/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/23215/'>https://stackoverflow.com/questions/23215/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/13406/'>https://stackoverflow.com/questions/13406/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/128296/'>https://stackoverflow.com/questions/128296/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/159643/'>https://stackoverflow.com/questions/159643/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/43290/'>https://stackoverflow.com/questions/43290/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/75122/'>https://stackoverflow.com/questions/75122/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/183858/'>https://stackoverflow.com/questions/183858/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/110078/'>https://stackoverflow.com/questions/110078/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/157225/'>https://stackoverflow.com/questions/157225/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/75376/'>https://stackoverflow.com/questions/75376/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/82799/'>https://stackoverflow.com/questions/82799/</a><br></li>
+<li><a href='https://stackoverflow.com/questions/18468/'>https://stackoverflow.com/questions/18468/</a><br></li>
+
+  </ul>
+  </div>
+  </div>
+  </div>
+</div>
+</body>
+</body>
+</html>
